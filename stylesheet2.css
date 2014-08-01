@@ -52,7 +52,8 @@ background: url(micstandbg.jpg) no-repeat center center fixed;
   width: 200px;
   padding: 5px;
   top: 60px;
-  left: 289px;
+  left: 200px;
+  color: beige;
 
   text-align: center;
   /* border-radius */
@@ -60,9 +61,6 @@ background: url(micstandbg.jpg) no-repeat center center fixed;
   -moz-border-radius: 5px;
   border-radius: 5px;
   /* box-shadow */
-  -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-  -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-  box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
 }
 
 #regicontainer
@@ -72,9 +70,8 @@ background: url(micstandbg.jpg) no-repeat center center fixed;
   
   width: 400px;
   height: 500px;
-  top: 300px;
+  top: 200px;
   right: 80px;
-
   text-align: center;
   /* border-radius */
   -webkit-border-radius: 5px;
@@ -86,9 +83,10 @@ background: url(micstandbg.jpg) no-repeat center center fixed;
   box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
 }
 
-#regicontainer ul
+.title
 {
-  list-style-type: none;
+  font-family: "Oswald";
+  color: white;
 }
 
 #regicontainer li
@@ -101,19 +99,83 @@ background: url(micstandbg.jpg) no-repeat center center fixed;
    color: white;
 }
 
+#signupform
+{
+  position: absolute;
+  left: 90;
+  opacity: 0;
+
+}
+
+#loginform
+{
+  position: absolute;
+  left: 90;
+  z-index: 2;
+
+}
+
 #regicontainer li a
 {
   text-decoration: none;
   color: white;
 }
 
-#username, #password
+#username, #password, #password2, #birthday
 {
     border-radius: 50px;
     width: 200px;
     height: 30px;
+    background-color: transparent;
 }
 
+::-webkit-input-placeholder:not(#birthday)  
+{ 
+    color: gold; 
+    font-style: italic;
+}
+
+#toregister:target ~ #regicontainer #signupform,
+#tologin:target ~ #regicontainer #loginform
+{
+    z-index: 3 !important;
+    opacity: 1 !important;
+    -webkit-animation: fadeInLeft 3s;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+     
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#toregister:target ~ #regicontainer #loginform,
+#tologin:target ~ #regicontainer #signupform
+{
+    z-index: 2 !important;
+    opacity: 0 !important;
+    -webkit-animation: fadeOutLeft 2s;
+}
+ 
+
+@-webkit-keyframes fadeOutLeft 
+{
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+     
+    100% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+}
 
 /* the div and body sections are used to making sections and position websites easily*/
 /* these make rectangle blocks to layout on the page. */
