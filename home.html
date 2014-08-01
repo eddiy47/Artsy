@@ -6,45 +6,82 @@
 	
 	<body>
   		<div id= "container">
+    		<a class="hiddenanchor" id="toregister"></a>
+    		<a class="hiddenanchor" id="tologin"></a>
+   			 <div id= "logo">
+   			 	<img src="artsylogo.png">
+   			 </div>
     
-   			 <div id= "logo">Logo goes here</div>
-    
-    		<div id= "slogan"> Slogan goes here</div>
+    		<div id= "slogan">
+    			<h1 id="slogan">slogan here!</h1>
+    		</div>
     
     		<div id = "regicontainer">
-    			<ul>
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Signup</a></li>
-				</ul>
+    			
+				<div id = "loginform">
+					<span class= "title"><h1>Login</h1></span>
+					<form  action="mysuperscript.php" autocomplete="on">  
+						<br>
+		                <p> 
+		                    <input id="username" name="username" required="required" type="text" placeholder="Email/Username"/>
+		                </p>
+		                <p> 
+		                    <input id="password" name="password" required="required" type="password"
+		                    placeholder="Password"/> 
+		                </p>
+		                <br>
+		                <p class="keeplogin"> 
+		                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+		                    <label for="loginkeeping">Keep me logged in</label>
+		                </p>
+		                <p class="login button"> 
+		                    <input type="submit" value="Login" /> 
+		                </p>
+		                <p class="change_link">
+		                    Not a member yet ?
+		                    <a href="#toregister" class="to_register">Join us</a>
+		                </p>
+            		</form>
+				</div>
 
-			<div id = "loginform">
-				<form  action="mysuperscript.php" autocomplete="on">  
-					<br><br><br><br>
-	                <p> 
-	                    <label for="username" class="uname"> Email/Username </label>
-	                    <input id="username" name="username" required="required" type="text" placeholder="Enter Here!"/>
-	                </p>
-	                <p> 
-	                    <label for="password" class="youpasswd"> Password </label>
-	                    <input id="password" name="password" required="required" type="password"/> 
-	                </p>
-	                <br>
-	                <p class="keeplogin"> 
-	                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-	                    <label for="loginkeeping">Keep me logged in</label>
-	                </p>
-	                <p class="login button"> 
-	                    <input type="submit" value="Login" /> 
-	                </p>
-	                <p class="change_link">
-	                    Not a member yet ?
-	                    <a href="#toregister" class="to_register">Join us</a>
-	                </p>
-            	</form>
-			</div>
+				<div id = "signupform">
+					<span class= "title"><h1>Sign Up</h1></span>
+					<form  action="mysuperscript.php" autocomplete="on">  
+							<br>
+			                <p> 
+			                    <input id="username" name="username" required="required" type="text" placeholder="Enter Email Here"/>
+			                </p>
+			                <p> 
+			                    <input id="password" name="password" required="required" type="password"
+			                    placeholder="Enter Password Here"/> 
+			                </p>
+			                <p> 
+			                    <input id="password2" name="password2" required="required" type="password"
+			                    placeholder="Re-Enter Password Here"/> 
+			                </p>
+
+			                <p> 
+			                    <input id="birthday" name="birthday" required="required" type="date"
+			                    placeholder="Enter Your DOB"/> 
+			                </p>
+
+			                <br>
+			                <p> 
+			                    <input type="submit" value="Sign Me Up" /> 
+			                </p>
+			                <p>
+			                    Already a member  ?
+			                    <a href="#tologin">Login Now</a>
+			                </p>
+            		</form>
+				</div>
 
     		</div>
   		</div>
+  		<footer>
+  			<a href="http://www.000webhost.com/" target="_blank"><img src="http://www.000webhost.com/images/80x15_powered.gif" alt="Web Hosting" width="80" height="15" border="0" /></a>
+
+  		</footer>
 	</body>
 
 </html>
